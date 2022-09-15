@@ -1,4 +1,15 @@
-﻿int GetArraySize(string message, string errorMessage)
+﻿Console.Clear();
+int size = GetArraySize("Введите колличество элементов массива: ", "Ошибка ввода, размер массива должен быть больше 0!");
+string[] elementsArr = GetArray(size);
+
+
+Console.WriteLine("\nВывод исходного массива: ");
+Console.WriteLine(String.Join(", ", elementsArr));
+
+Console.WriteLine("\nВывод нового массива: ");
+ReturnNewArray(elementsArr);
+
+int GetArraySize(string message, string errorMessage)
 {
     while(true)
     {
